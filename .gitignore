@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+.venv/
+venv/
+my_312_project_env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test, coverage, and profiling
+htmlcov/
+.tox/
+.coverage
+.cache
+.pytest_cache/
+
+# Data/output
+*.csv
+*.h5
+*.db
+*.sqlite3
+
+# Others
+*.bak
+*.swp
+*.tmp
+
+# Ignore batch and shell scripts if not needed in repo
+# *.bat
+# *.sh
