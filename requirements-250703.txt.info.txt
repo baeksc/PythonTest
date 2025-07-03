@@ -1,0 +1,2 @@
+# 현재 가상환경에 설치된 패키지와 버전 목록은 requirements-250703.txt 파일에 저장되었습니다.
+# 파일 경로: d:\Projects\AIProjects\PythonTest\PythonTest\requirements-250703.txt
