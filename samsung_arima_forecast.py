@@ -59,11 +59,13 @@ def main(model_name='arima'):
     plt.ylim(np.min(all_vals)*0.98, np.max(all_vals)*1.02)
     plt.legend()
     plt.show()
+
     # 예측값 출력
     forecast_rounded = forecast.round(0).astype(int)
     forecast_df = pd.DataFrame({'Date': forecast_index, 'Predicted_Close': forecast_rounded})
     forecast_df.set_index('Date', inplace=True)
     print(forecast_df)
+
     # 예측값 차트로 시각화 (막대그래프, 확대)
     plt.figure(figsize=(12,6))
     plt.bar(forecast_df.index.strftime('%Y-%m-%d'), forecast_df['Predicted_Close'], color='orange')
@@ -74,6 +76,7 @@ def main(model_name='arima'):
     plt.xticks(rotation=45, fontsize=8)
     plt.tight_layout()
     plt.show()
+
     # plotly로 예측 결과 라인차트 (툴팁, 값 라벨 포함)
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=data_close.iloc[plot_start:].index, y=actual_vals, mode='lines', name='Actual'))
@@ -84,6 +87,7 @@ def main(model_name='arima'):
                      legend=dict(x=0, y=1),
                      hovermode='x unified')
     fig.show()
+    
     # plotly로 예측값 막대그래프 (툴팁, 값 라벨 포함)
     fig2 = go.Figure()
     fig2.add_trace(go.Bar(x=forecast_df.index.strftime('%Y-%m-%d'), y=forecast_df['Predicted_Close'],
